@@ -1,0 +1,26 @@
+{
+  "name": "Scroll up",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Easily scroll to top of the page",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "https://www.google-analytics.com/",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["scripts.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "icons": {
+    "16": "upload-16.png",
+    "32": "upload-32.png",
+    "128": "upload-128.png"
+  }
+}
